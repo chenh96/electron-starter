@@ -1,0 +1,29 @@
+{
+  "name": "electron-starter",
+  "version": "0.0.1",
+  "main": "./dist/main/index.js",
+  "scripts": {
+    "preview": "vite",
+    "build": "tsc -p ./src/view && vite build && tsc -p ./src/main && electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^13.1.7",
+    "electron-builder": "^22.11.7",
+    "typescript": "^4.3.2",
+    "vite": "^2.4.3"
+  },
+  "build": {
+    "appId": "cloud.chenh.elec",
+    "productName": "ElecStarter",
+    "win": {
+      "icon": "./src/asset/logo.png",
+      "target": "nsis"
+    },
+    "files": [
+      "dist"
+    ],
+    "directories": {
+      "output": "app"
+    }
+  }
+}
